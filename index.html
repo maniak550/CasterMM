@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<head>
+	<meta charset="utf-8">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="container">
+		<br />
+		<br />
+    <h2 align="center">Calculate TL</h2>
+    <form>
+		<div class="form-group ">
+			<div class="wrapper container" id="wrapper">
+        <div id="articles">
+				<div class="form-row align-items-center">
+					<div class="form-group col-md-6">
+						<label for="el-select-0">Choose a solute element :</label>
+						<select id="el-select-0" class="form-control name_list" label="Solute" required>
+							<option value="-1">--Please choose an solute element--</option>
+							<option value="Al">Al</option>
+							<option value="C">C</option>
+							<option value="Co">Co</option>
+							<option value="Cr">Cr</option>
+							<option value="Mn">Mn</option>
+							<option value="Mo">Mo</option>
+							<option value="Ni">Ni</option>
+							<option value="P">P</option>
+							<option value="S">S</option>
+							<option value="Si">Si</option>
+							<option value="Ti">Ti</option>
+							<option value="V">V</option>
+						</select>
+					</div>
+					<div class="form-group col-md-5">
+						<label for="quantity-0">Amount of a solute element [%]:</label>
+						<input value=0 type="number" id="quantity-0" name="quantity[]" placeholder="quantity" class="form-control name_list amountinput" step="0.01" value="1" min="0" max="50"/>
+					</div>
+					<div class="col-md-1 text-center btn">
+						<button type="button" name="add" id="add" class="btn btn-success ">Add</button>
+					</div>
+				</div>
+			</div>
+			<div class="form row align-items-center">
+				<div class="form-group col-md-12">
+					<select id="alg-select" class="form-control name_list">
+						<option value="Nothing">--Please choose an calculation algorithm--</option>
+						<option value="R1">Roeser/Wensel</option>
+						<option value="C1">CONCAST</option>
+						<option value="MM1">MM Caster</option>
+						<option value="HW1">Howe</option>
+					</select>
+				</div>
+      </div>
+    </div>
+			<div class="col-auto text-center my-auto" id="buttons">
+				<input type="button" name="Calculate" id="submit" class="btn btn-info my-auto" value="Calculate" />
+				<button type="button" class="btn btn-info my-auto" onclick="window.print()">Print</button>
+				<input type="button"  name="Reset Results" id="submit" class="btn btn-danger my-auto" value="Reset Results" onClick="document.location.reload(true)"/>
+			</div>
+			<div id="result"></div>
+			<div class="col-auto text-center my-auto table-responsive align-items-center" id="table">
+		<div class="align-items-center col-md-12"id="resultTable"></div></div>
+
+    </div>
+  </form>
+	</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+
+
+</html>
